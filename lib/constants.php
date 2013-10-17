@@ -4,12 +4,12 @@
  * 
  * @package Drip
  * @author Samuel Hulick <service@getdrip.com>
- * @version 1.0.2
+ * @version 1.0.0
  * @since 1.0.0
  */
 
 // The current version of this plugin
-if( !defined( 'WP_DRIP_VERSION' ) ) define( 'WP_DRIP_VERSION', '1.0.2' );
+if( !defined( 'WP_DRIP_VERSION' ) ) define( 'WP_DRIP_VERSION', '1.0.0' );
 
 // The directory the plugin resides in
 if( !defined( 'WP_DRIP_DIRNAME' ) ) define( 'WP_DRIP_DIRNAME', dirname( dirname( __FILE__ ) ) );

@@ -25,7 +25,7 @@ require_once( dirname( __FILE__ ) . '/lib/constants.php' );
 class WP_Drip {
 	var $namespace = "drip";
 	var $friendly_name = "Drip";
-	var $version = "1.0.2";
+	var $version = "1.0.0";
 	var $options_name = "drip_options";
 	var $options;
 	var $settings_path;
@@ -233,7 +233,7 @@ class WP_Drip {
 	 * @uses add_settings_field()
 	 */
 	public function admin_register_settings() {
-		register_setting( 'drip_options_group', $this->options_name, array( &$this, 'validate_settings' ) );
+		register_setting( $this->options_name, $this->options_name, array( &$this, 'validate_settings' ) );
 		add_settings_section( 'drip_code_settings', 'Tracking Code', array( &$this, 'admin_section_code_settings' ), $this->namespace );
 		add_settings_field( 'drip_account_id', 'Account ID', array( &$this, 'admin_option_account_id' ), $this->namespace, 'drip_code_settings' );
 		add_settings_field( 'drip_is_disabled', 'Visibility', array( &$this, 'admin_option_is_disabled' ), $this->namespace, 'drip_code_settings' );
@@ -261,6 +261,12 @@ class WP_Drip {
 			}
 		}
 		
+    if ( isset( $input['is_disabled'] ) ) {
+      $options['is_disabled'] = $input['is_disabled'] == "1";
+    } else {
+      $options['is_disabled'] = false;
+    }
+    
 		return $options;
 	}
 	
@@ -284,7 +290,7 @@ class WP_Drip {
 	 * Output the description for the Tracking Code settings section
 	 */
 	public function admin_section_code_settings() {
-		echo '<p>You can find your account ID under <a href="#" target="_blank">Account &rarr; Settings</a> in your Drip account.</p>';
+		echo '<p>You can find your account ID under <a href="http://getdrip.com/settings/site" target="_blank">Settings &rarr; Site Setup</a> in your Drip account.</p>';
 	}
 	
 	/**
