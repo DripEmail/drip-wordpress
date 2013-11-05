@@ -1,5 +1,4 @@
 <div class="wrap">
-	<?php settings_errors(); ?>
 	<div id="icon-options-drip" class="icon32"><br></div>
 	<h2>Drip Settings 
 		<a href="http://www.getdrip.com/tour?utm_source=wp-plugin&utm_medium=link&utm_campaign=dashboard-header" class="drip-visit" target="_blank">Take a Tour</a>
