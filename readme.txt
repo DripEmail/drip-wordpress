@@ -24,7 +24,7 @@ activate your Drip account's features.
 
 = More Information =
 
-- [Try Drip free for 30 days](https://www.getdrip.com)
+- [Try Drip free for 21 days](https://www.getdrip.com)
 - [How does Drip work?](https://www.getdrip.com/tour)
 
 = Need Help? =
