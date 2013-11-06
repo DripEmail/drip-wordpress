@@ -11,7 +11,7 @@
  */
 /*
 Plugin Name: Email Marketing by Drip
-Plugin URI: http://www.getdrip.com/widget/wordpress/?utm_source=wp-plugin&utm_medium=link&utm_campaign=plugins
+Plugin URI: http://www.getdrip.com/?utm_source=wp-plugin&utm_medium=link&utm_campaign=plugins
 Description: Instantly include the Drip tracking script so you can use email and years of best practices to create a double-digit jump in your conversion rate.
 Version: 1.0.0
 Author: Drip
