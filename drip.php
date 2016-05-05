@@ -151,7 +151,8 @@ class WP_Drip {
 	 */
 	public function tracking_code() {
 		// Check if the ID is set and is an integer
-		if ( ! $this->get_option( 'is_disabled' ) ) {
+		$bDisplayCodeForUser = !( $this->get_option( 'ignore_administrators' ) && is_user_logged_in() && current_user_can( 'manage_options' ) );
+		if ( ! $this->get_option( 'is_disabled' ) && $bDisplayCodeForUser ) {
 			if ( $this->get_option( 'account_id' ) ) { 
 				$account_id = $this->get_option( 'account_id' );
 				include( WP_DRIP_DIRNAME . "/views/tracking-code.php" );
@@ -237,6 +238,7 @@ class WP_Drip {
 		add_settings_section( 'drip_code_settings', 'Tracking Code', array( $this, 'admin_section_code_settings' ), $this->namespace );
 		add_settings_field( 'drip_account_id', 'Account ID', array( $this, 'admin_option_account_id' ), $this->namespace, 'drip_code_settings' );
 		add_settings_field( 'drip_is_disabled', 'Visibility', array( $this, 'admin_option_is_disabled' ), $this->namespace, 'drip_code_settings' );
+		add_settings_field( 'drip_ignore_administrators', 'Ignore Administrators', array( $this, 'admin_option_ignore_administrators' ), $this->namespace, 'drip_code_settings' );
 	}
 	
 	/**
@@ -260,13 +262,20 @@ class WP_Drip {
 				add_settings_error( 'account_id', $this->namespace . '_account_id_error', "Please enter a valid account ID", 'error' );
 			}
 		}
-		
-    if ( isset( $input['is_disabled'] ) ) {
-      $options['is_disabled'] = $input['is_disabled'] == "1";
-    } else {
-      $options['is_disabled'] = false;
-    }
-    
+
+		if ( isset( $input['is_disabled'] ) ) {
+			$options['is_disabled'] = $input['is_disabled'] == "1";
+		} else {
+			$options['is_disabled'] = false;
+		}
+
+		if ( isset( $input['ignore_administrators'] ) ) {
+			$options['ignore_administrators'] = ( $input['ignore_administrators'] == "1" );
+		}
+		else {
+			$options['ignore_administrators'] = false;
+		}
+
 		return $options;
 	}
 	
@@ -284,6 +293,15 @@ class WP_Drip {
 		echo "<label><input type='checkbox' name='drip_options[is_disabled]' value='1' " . 
 			checked( 1, $this->get_option( 'is_disabled' ), false ) . " /> " .
 			"Disable tracking code on all pages</label>";
+	}
+
+	/**
+	 * Output the input for the account ID option
+	 */
+	public function admin_option_ignore_administrators() {
+		echo '<label><input type="checkbox" name="drip_options[ignore_administrators]" value="1" ' .
+			checked( 1, $this->get_option( 'ignore_administrators' ), false ) . ' /> ' .
+			"Ignore Logged-In Administrators</label>";
 	}
 	
 	/** 
