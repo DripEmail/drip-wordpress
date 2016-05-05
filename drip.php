@@ -89,23 +89,23 @@ class WP_Drip {
 	 */
 	private function _add_hooks() {
 		// Activation and deactivation
-		register_activation_hook( __FILE__, array( &$this, 'activate' ) );
-		register_deactivation_hook( __FILE__, array( &$this, 'deactivate' ) );
+		register_activation_hook( __FILE__, array( $this, 'activate' ) );
+		register_deactivation_hook( __FILE__, array( $this, 'deactivate' ) );
 		
 		// Options page for configuration
-		add_action( 'admin_menu', array( &$this, 'admin_menu' ) );
+		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 
 		// Register admin settings
-		add_action( 'admin_init', array( &$this, 'admin_register_settings' ) );
+		add_action( 'admin_init', array( $this, 'admin_register_settings' ) );
 		
 		// Register activation redirect
-		add_action( 'admin_init', array( &$this, 'do_activation_redirect' ) );
+		add_action( 'admin_init', array( $this, 'do_activation_redirect' ) );
 		
 		// Add settings link on plugins page
-		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( &$this, 'plugin_action_links' ) );
+		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'plugin_action_links' ) );
 
 		// Place tracking code in the footer
-		add_action( 'wp_footer', array( &$this, 'tracking_code' ) );
+		add_action( 'wp_footer', array( $this, 'tracking_code' ) );
 	}
 	
 	/**
@@ -186,10 +186,10 @@ class WP_Drip {
 	 * @uses add_options_page()
 	 */
 	public function admin_menu() {
-		$page_hook = add_options_page( 'Drip Settings', $this->friendly_name, 'manage_options', $this->namespace, array( &$this, 'admin_options_page' ) );
+		$page_hook = add_options_page( 'Drip Settings', $this->friendly_name, 'manage_options', $this->namespace, array( $this, 'admin_options_page' ) );
 		
 		// Add admin scripts and styles
-		add_action( 'admin_enqueue_scripts', array( &$this, 'admin_enqueue_scripts' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
 	}
 	
 	/**
@@ -233,10 +233,10 @@ class WP_Drip {
 	 * @uses add_settings_field()
 	 */
 	public function admin_register_settings() {
-		register_setting( $this->options_name, $this->options_name, array( &$this, 'validate_settings' ) );
-		add_settings_section( 'drip_code_settings', 'Tracking Code', array( &$this, 'admin_section_code_settings' ), $this->namespace );
-		add_settings_field( 'drip_account_id', 'Account ID', array( &$this, 'admin_option_account_id' ), $this->namespace, 'drip_code_settings' );
-		add_settings_field( 'drip_is_disabled', 'Visibility', array( &$this, 'admin_option_is_disabled' ), $this->namespace, 'drip_code_settings' );
+		register_setting( $this->options_name, $this->options_name, array( $this, 'validate_settings' ) );
+		add_settings_section( 'drip_code_settings', 'Tracking Code', array( $this, 'admin_section_code_settings' ), $this->namespace );
+		add_settings_field( 'drip_account_id', 'Account ID', array( $this, 'admin_option_account_id' ), $this->namespace, 'drip_code_settings' );
+		add_settings_field( 'drip_is_disabled', 'Visibility', array( $this, 'admin_option_is_disabled' ), $this->namespace, 'drip_code_settings' );
 	}
 	
 	/**
