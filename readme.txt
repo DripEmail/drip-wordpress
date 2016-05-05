@@ -63,5 +63,9 @@ to get started!
 
 == Changelog ==
 
+= 1.0.1 =
+
+* Added option to ignore logged-in administrators so as to not impact form display statistics
+
 = 1.0.0 =
 * Initial release.
