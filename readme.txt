@@ -2,8 +2,9 @@
 Contributors: getdrip
 Tags: email marketing, marketing automation, email campaign, email newsletters, autoresponders
 Requires at least: 3.0
-Tested up to: 6.4.3
-Stable tag: 1.0.2
+Tested up to: 7.1
+Requires PHP: 7.4
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +61,11 @@ Our Support Team is available via email between 9 am - 5 pm CST and 8 am - 8 pm 
 
 
 == Changelog ==
+
+= 1.0.3 =
+* Tested with WordPress 7.1 and PHP 8.4.
+* Fix a PHP deprecation notice when activating on a site with no saved settings.
+* Escape the account ID in the settings field and tracking script.
 
 = 1.0.2 =
 * Initial release.

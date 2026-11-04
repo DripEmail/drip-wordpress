@@ -7,13 +7,13 @@
  * @package Drip
  * @global object $WP_Drip
  * @author getdrip <support@getdrip.com>
- * @version 1.0.2
+ * @version 1.0.3
  */
 /*
 Plugin Name: Drip for WordPress
 Plugin URI: http://www.getdrip.com/?utm_source=wp-plugin&utm_medium=link&utm_campaign=plugins
 Description: Instantly include the Drip tracking script so you can use email and years of best practices to create a double-digit jump in your conversion rate.
-Version: 1.0.2
+Version: 1.0.3
 Author: Drip
 Author URI: http://www.getdrip.com
 License: GPLv2
@@ -25,7 +25,7 @@ require_once( dirname( __FILE__ ) . '/lib/constants.php' );
 class WP_Drip {
 	var $namespace = "drip";
 	var $friendly_name = "Drip";
-	var $version = "1.0.2";
+	var $version = "1.0.3";
 	var $options_name = "drip_options";
 	var $options;
 	var $settings_path;
@@ -40,7 +40,7 @@ class WP_Drip {
 		$this->settings_path = 'options-general.php?page=' . $this->namespace;
 
 		// Fetch options
-		$this->options = get_option( $this->options_name );
+		$this->options = get_option( $this->options_name, array() );
 
 		// Load all library files used by this plugin
 		$libs = glob( WP_DRIP_DIRNAME . '/lib/*.php' );
@@ -274,7 +274,7 @@ class WP_Drip {
 	 * Output the input for the account ID option
 	 */
 	public function admin_option_account_id() {
-		echo "<input type='text' name='drip_options[account_id]' size='20' value='{$this->get_option( 'account_id' )}'>";
+		echo "<input type='text' name='drip_options[account_id]' size='20' value='" . esc_attr( $this->get_option( 'account_id' ) ) . "'>";
 	}
 
 	/**
