@@ -9,7 +9,7 @@
  */
 
 // The current version of this plugin
-if( !defined( 'WP_DRIP_VERSION' ) ) define( 'WP_DRIP_VERSION', '1.0.0' );
+if( !defined( 'WP_DRIP_VERSION' ) ) define( 'WP_DRIP_VERSION', '1.0.3' );
 
 // The directory the plugin resides in
 if( !defined( 'WP_DRIP_DIRNAME' ) ) define( 'WP_DRIP_DIRNAME', dirname( dirname( __FILE__ ) ) );

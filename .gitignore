@@ -1,2 +1,4 @@
 # OS Noise
 .DS_Store
+# Local dev environment
+/devtools_wp/db_data/
