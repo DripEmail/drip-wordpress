@@ -1,67 +1,65 @@
-=== Email Marketing by Drip ===
-Contributors: drip
-Tags: email marketing, lead generation, digital marketing, email campaign, email newsletters, autoresponders
+=== Drip for WordPress ===
+Contributors: getdrip
+Tags: email marketing, marketing automation, email campaign, email newsletters, autoresponders
 Requires at least: 3.0
-Tested up to: 3.4.2
-Stable tag: 1.0.0
+Tested up to: 6.4.3
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Use email and years of best practices to create a double-digit jump in your conversion rate.
+== DESCRIPTION ==
 
-== Description ==
+**Do you sell online? If so you need [our new Drip for WooCommerce Plugin instead of this one](https://wordpress.org/plugins/drip/). It includes your entire product catalog, order history integration, revenue tracking, and much more.**
 
-Drip (www.getdrip.com) is the easiest way to capture drive-by website visitors and 
-engage with them through an email mini-course. The first step to setting up Drip is 
-to install a snippet of JavaScript in the footer of your website, and this plugin makes 
-that dead simple for our customers who run WordPress.
+[Drip](https://www.drip.com) is an email and onsite marketing automation platform for ecommerce brands.
 
-= The Drip Process =
+Get your WooCommerce data while it’s hot, then use it to fuel email and onsite marketing strategies that work.
 
-Simply [sign up for a Drip account](https://www.getdrip.com/pricing) and install this
-plugin to get started. Once installed, we place a tracking script on your site to
-activate your Drip account's features.
+Tap into dynamic, money-making segmentation that lets you hyper-customize audiences, deliver better shopping experiences, and connect with customers like never before.
 
-= More Information =
+Access pre-built workflows designed around industry best practices and high-converting logic. Take things a step further and split test up to five paths at a time until the engagement sticks.
 
-- [Try Drip free for 21 days](https://www.getdrip.com)
-- [How does Drip work?](https://www.getdrip.com/tour)
+Save yourself time with our easy yet powerful automations. Reach people at the right moment, with just the right message to bump click-through-rates and boost sales.
 
-= Need Help? =
+Pick a template, add your branding using our oh-so-easy visual email builder, and send high-converting email campaigns in minutes.
 
-[Contact our friendly support staff](https://www.getdrip.com/contact) for assistance.
+Collect zero-party data on your site and use it to turn visitors → subscribers → customers. 
 
-== Installation ==
+Install the Drip for WooCommerce plugin. See why thousands of ecommerce brands across the globe trust Drip to build personal and profitable relationships with their customers. 
 
-1. Upload the `email-marketing` folder to the `/wp-content/plugins/` directory
-2. Activate the **Email Marketing by Drip** plugin through the 'Plugins' menu in WordPress
-3. Configure the plugin by going to the `Drip` page that appears in your Settings menu
+== Let's Get Started ==
 
-== Frequently Asked Questions ==
+Ready to start building customer relationships the way they were meant to be? Here’s what you have to do next:
 
-= How do I install the tracking script on my website? =
+**1. Sign up for a Drip account**
 
-This plugin automatically installs the Drip tracking script for you. All you 
-have to do is install this plugin and enter your Account ID on its settings page.
-Your Account ID can be found on the [Settings > Site Setup](https://www.getdrip.com/settings/site)
-page.
+Signing up is easy. [Just head here](https://www.drip.com/), tell us a little bit about yourself, and let the fun begin.
 
-= Do I need to have a Drip account? =
+**2. Install the Drip plugin, and select “Drip” from the Settings menu in your WordPress sidebar.**
 
-Yep. This plugin installs the tracking code needed for Drip to work. 
-[Sign up here](https://www.getdrip.com/pricing) for a free trial.
+**3. Enter your Drip Account ID, click “Save Changes,” and you’re done!**
 
-= Who can I contact for help? =
+== FAQs ==
 
-We're always happy to help with setting it up - just [contact us here](https://www.getdrip.com/contact)
-to get started!
+=== Do you offer a free trial? ===
+
+Yes, we offer a free 14-day trial for new users. Sign up for a free trial here: [https://www.getdrip.com/signup/basic](https://www.getdrip.com/signup/basic)
+
+=== How much does Drip cost? ===
+
+Plans start at $39/mo. Find your monthly cost on our pricing page: [https://www.drip.com/pricing](https://www.drip.com/pricing)
+
+=== Do you offer support? How do I contact them? ===
+
+Our Support Team is available via email between 9 am - 5 pm CST and 8 am - 8 pm CET Monday through Friday at support@drip.com. We offer live chat during these times for customers on the $99/mo+ plan.
 
 == Screenshots ==
 
 1. The Drip plugin settings page
-2. Find your Account ID in your Drip's Settings > Site Setup page
+2. Find your Account ID in your Drip account under **Settings** > **Account** > **General Info**
+
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.2 =
 * Initial release.

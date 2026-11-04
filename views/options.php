@@ -1,7 +1,6 @@
 <div class="wrap">
 	<div id="icon-options-drip" class="icon32"><br></div>
 	<h2>Drip Settings 
-		<a href="http://www.getdrip.com/tour?utm_source=wp-plugin&utm_medium=link&utm_campaign=dashboard-header" class="drip-visit" target="_blank">Take a Tour</a>
 		<a href="http://www.getdrip.com/contact?utm_source=wp-plugin&utm_medium=link&utm_campaign=dashboard-header" class="drip-visit" target="_blank">Support</a>
 	</h2>
 	<?php if ( ! $this->account_id() ) { ?>
