@@ -34,30 +34,36 @@ Ready to start building customer relationships the way they were meant to be? He
 
 **1. Sign up for a Drip account**
 
-Signing up is easy. [Just head here](https://www.drip.com/), tell us a little bit about yourself, and let the fun begin.
+Signing up is easy. [Just head here](https://www.drip.com/signup), tell us a little bit about yourself, and let the fun begin.
 
 **2. Install the Drip plugin, and select “Drip” from the Settings menu in your WordPress sidebar.**
 
 **3. Enter your Drip Account ID, click “Save Changes,” and you’re done!**
 
-== FAQs ==
+You’ll find your Account ID in Drip under [Settings → General](https://www.getdrip.com/settings/general).
 
-=== Do you offer a free trial? ===
+== Frequently Asked Questions ==
 
-Yes, we offer a free 14-day trial for new users. Sign up for a free trial here: [https://www.getdrip.com/signup/basic](https://www.getdrip.com/signup/basic)
+= Do you offer a free trial? =
 
-=== How much does Drip cost? ===
+Yes. Start your free trial at [drip.com/signup](https://www.drip.com/signup).
 
-Plans start at $39/mo. Find your monthly cost on our pricing page: [https://www.drip.com/pricing](https://www.drip.com/pricing)
+= How much does Drip cost? =
 
-=== Do you offer support? How do I contact them? ===
+See current plans on our [pricing page](https://www.drip.com/pricing).
 
-Our Support Team is available via email between 9 am - 5 pm CST and 8 am - 8 pm CET Monday through Friday at support@drip.com. We offer live chat during these times for customers on the $99/mo+ plan.
+= Where do I find my Account ID? =
+
+In your Drip account under [Settings → General](https://www.getdrip.com/settings/general).
+
+= Do you offer support? How do I contact them? =
+
+Yes. Browse guides in the [Drip Help Center](https://help.drip.com) or email our Support Team at support@drip.com.
 
 == Screenshots ==
 
 1. The Drip plugin settings page
-2. Find your Account ID in your Drip account under **Settings** > **Account** > **General Info**
+2. Find your Account ID in your Drip account under **Settings** > **General**
 
 
 == Changelog ==
@@ -66,6 +72,7 @@ Our Support Team is available via email between 9 am - 5 pm CST and 8 am - 8 pm 
 * Tested with WordPress 7.1 and PHP 8.4.
 * Fix a PHP deprecation notice when activating on a site with no saved settings.
 * Escape the account ID in the settings field and tracking script.
+* Point the settings page and readme at the current Account ID location, and refresh signup, pricing, and support details.
 
 = 1.0.2 =
 * Initial release.

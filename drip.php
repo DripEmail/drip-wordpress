@@ -290,7 +290,7 @@ class WP_Drip {
 	 * Output the description for the Tracking Code settings section
 	 */
 	public function admin_section_code_settings() {
-		echo '<p>You can find your account ID under <a href="http://getdrip.com/settings/site" target="_blank">Settings &rarr; Site Setup</a> in your Drip account.</p>';
+		echo '<p>You can find your account ID under <a href="https://www.getdrip.com/settings/general" target="_blank">Settings &rarr; General</a> in your Drip account.</p>';
 	}
 
 	/**
