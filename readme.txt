@@ -71,7 +71,7 @@ Yes. Browse guides in the [Drip Help Center](https://help.drip.com) or email our
 = 1.0.3 =
 * Tested with WordPress 7.1 and PHP 8.5.
 * Fix a PHP deprecation notice when activating on a site with no saved settings.
-* Escape the account ID in the settings field and tracking script.
+* Escape the account ID in the settings field and tracking script, and always load the Drip tag over HTTPS.
 * Point the settings page and readme at the current Account ID location, and refresh signup, pricing, and support details.
 
 = 1.0.2 =
