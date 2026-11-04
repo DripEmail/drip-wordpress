@@ -8,15 +8,15 @@
 	line-height: 0;
 	height: 0;
 }
- 
+
 .drip-clearfix {
 	display: inline-block;
 }
- 
+
 html[xmlns] .drip-clearfix {
 	display: block;
 }
- 
+
 * html .drip-clearfix {
 	height: 1%;
 }
